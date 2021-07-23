@@ -1,0 +1,12 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.Pomodoro" parent="Theme.MaterialComponents.DayNight">
+        <item name="colorPrimary">@color/primaryLightColor_red_400</item>
+        <item name="colorPrimaryDark">@color/white</item>
+        <item name="colorPrimaryVariant">@color/primaryColor_red_400</item>
+        <item name="colorSecondary">@color/secondaryLightColor_red_500</item>
+        <item name="colorSecondaryVariant">@color/secondaryColor_red_500</item>
+        <item name="backgroundColor">@color/cardview_light_background</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+    </style>
+</resources>

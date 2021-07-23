@@ -45,8 +45,8 @@ It's fine :dog::fire:. Но хорошая новость в том, что ес
 Если вам показалось, что задание слишком сложное для вашего уровня - не переживайте! Будет три примера исходниками - создание RecyclerView с таймером, создание Custom View и создание Foreground Service c Notification. Останется объединить все это в одном проекте:
 
 1. Пример Recycler View - [смотри тут](https://ziginsider.github.io/Simple-RecyclerView-StopwatchApp/)
-2. Пример Custom View - [смотри тут](https://ziginsider.github.io/Simple-Custom-View/)
-3. Пример Foreground Service - [смотри тут](https://ziginsider.github.io/Foreground-Service/)
+2. Пример Custom View - Not implemented yet
+3. Пример Foreground Service - Not implemented yet
 
  
 ## Cross-checking
