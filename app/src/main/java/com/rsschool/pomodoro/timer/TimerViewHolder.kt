@@ -92,6 +92,7 @@ class TimerViewHolder(
             override fun onFinish() {
                 timer.isStarted = false
                 finish(timer)
+                vibrateAndSoundNotify(context)
             }
         }
     }
@@ -101,7 +102,6 @@ class TimerViewHolder(
         countDownTimer?.cancel()
         binding.time.text = START_TIME
         isVisible(false)
-        vibrateAndSoundNotify(context)
         binding.blinkingIndicator.isInvisible = true
         (binding.blinkingIndicator.background as? AnimationDrawable)?.stop()
     }
@@ -135,7 +135,6 @@ class TimerViewHolder(
         }
         binding.startPauseButton.isInvisible = !visible
         binding.customView.isInvisible = !visible
-
     }
 
     private companion object {

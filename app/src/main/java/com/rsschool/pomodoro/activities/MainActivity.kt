@@ -24,6 +24,7 @@ class MainActivity : AppCompatActivity(), TimerListener, LifecycleObserver {
     private val timers = mutableListOf<Timer>()
     private var nextId = 0
     private var currentTime = 0L
+    private var index: Int = -1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -51,7 +52,7 @@ class MainActivity : AppCompatActivity(), TimerListener, LifecycleObserver {
         timers.map {
             if (it.isStarted) stop(it.id)
         }
-        val index = timers.indexOf(timers.find { it.id == id })
+        index = timers.indexOf(timers.find { it.id == id })
         timers[index].run {
             isStarted = true
             finishTime = System.currentTimeMillis() + currentMs
@@ -92,4 +93,11 @@ class MainActivity : AppCompatActivity(), TimerListener, LifecycleObserver {
         startService(startIntent)
     }
 
+    override fun onDestroy() {
+        if (index != -1) {
+            stop(index)
+        }
+        onAppForegrounded()
+        super.onDestroy()
+    }
 }
