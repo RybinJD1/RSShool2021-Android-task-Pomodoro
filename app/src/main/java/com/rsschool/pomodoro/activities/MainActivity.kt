@@ -72,6 +72,7 @@ class MainActivity : AppCompatActivity(), TimerListener, LifecycleObserver {
 
     override fun delete(id: Int) {
         stop(id)
+        onAppForegrounded()
         timers.remove(timers.find { it.id == id })
         timerAdapter.submitList(timers.toList())
     }
